@@ -16,7 +16,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath("net.serenity-bdd:serenity-gradle-plugin:1.1.1")
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.2.5-rc.11")
     }
 }
 
@@ -26,13 +26,10 @@ apply plugin: 'idea'
 apply plugin: 'net.serenity-bdd.aggregator'
 
 dependencies {
-    testCompile 'net.serenity-bdd:serenity-core:1.2.4'
-    testCompile 'net.serenity-bdd:serenity-junit:1.2.4'
+    testCompile 'net.serenity-bdd:serenity-core:1.2.5-rc.23'
+    testCompile 'net.serenity-bdd:serenity-junit:1.2.5-rc.11'
     testCompile 'net.serenity-bdd:serenity-cucumber:1.1.29'
     testCompile('junit:junit:4.12')
-    testCompile('org.seleniumhq.selenium:selenium-java:3.3.1')
-    testCompile('org.seleniumhq.selenium:selenium-support:3.3.1')
-    testCompile('org.seleniumhq.selenium:selenium-chrome-driver:3.3.1')
     testCompile('org.assertj:assertj-core:1.7.0')
     testCompile('org.slf4j:slf4j-simple:1.7.7')
 }
