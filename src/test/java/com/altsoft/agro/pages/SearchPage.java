@@ -16,7 +16,7 @@ public class SearchPage extends PageObject {
 
     public void searchFor(String keywords) {
         search.sendKeys(keywords, Keys.ENTER);
-        waitFor(titleContains("Google Search"));
+        waitFor(titleContains(keywords));
     }
 
 }

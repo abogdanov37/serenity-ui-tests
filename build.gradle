@@ -3,6 +3,10 @@ version '1.0'
 
 apply plugin: 'java'
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
 sourceCompatibility = 1.8
 
 repositories {
@@ -33,4 +37,9 @@ dependencies {
     testCompile('org.assertj:assertj-core:1.7.0')
     testCompile('org.slf4j:slf4j-simple:1.7.7')
 }
+
 gradle.startParameter.continueOnFailure = true
+
+test {
+    systemProperty "file.encoding", "utf-8"
+}
